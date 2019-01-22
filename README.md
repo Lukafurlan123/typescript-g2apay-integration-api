@@ -1,0 +1,1 @@
+# typescript-g2apay-integration-api
