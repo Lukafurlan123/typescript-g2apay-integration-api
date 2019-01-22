@@ -1,3 +1,15 @@
+export namespace G2APay {
+  export namespace API {
+    /**
+     * @param production Production enviroment urls
+     * @param sandbox Sandbox enviroment urls
+     */
+    export interface Enviroments {
+      production: string,
+      sandbox: string,
+    }
+  }
+}
 export namespace Payment {
   /**
    * @param sku Unique item number
@@ -67,7 +79,7 @@ export namespace Payment {
    * @param process_payment Payment method or group to display (values: paypal_gateway, skrill or card)
    * @param customer_ip_adress Customer IPv4 address
    */
-  export interface Payment {
+  export interface PaymentRequest {
     api_hash: string,
     hash: string,
     order_id: string,
@@ -82,5 +94,13 @@ export namespace Payment {
     addresses?: Addresses[],
     process_payment?: string,
     customer_ip_adress: string,
+  }
+  /**
+   * @param status PaymentRequest status
+   * @param token Unique transaction identifier
+   */
+  export interface PaymentResponse {
+    status: string,
+    token: string,
   }
 }
