@@ -11,6 +11,8 @@
   "author": "Luka Furlan",
   "license": "ISC",
   "dependencies": {
+    "@types/sha256": "^0.2.0",
+    "sha256": "^0.2.0",
     "ts-node": "^8.0.1",
     "typescript": "^3.1.6"
   },
