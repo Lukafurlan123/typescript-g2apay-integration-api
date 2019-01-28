@@ -1,4 +1,5 @@
 import sha256 from 'sha256';
+import queryString from 'query-string';
 import axios, { AxiosResponse } from 'axios';
 import { Payment } from './interfaces';
 import { EnvironmentType } from './enums';
@@ -42,10 +43,10 @@ export async function generateIPNHash(transactionId: string, userOrderId: string
  */
 export async function createPaymentRequest(paymentData: Payment.PaymentRequest, environment: EnvironmentType) : Promise<string> {
   try {
-    const response : AxiosResponse = await axios.post(QUOTE_URL[environment], paymentData);
+    const response : AxiosResponse = await axios.post(QUOTE_URL[environment], queryString.stringify(paymentData));
     const responseData : Payment.PaymentResponse = response.data;
     return responseData.token;
   } catch {
-    throw new Error("PAYMENT_CREATION_FAILED");
+    throw new Error(`PAYMENT_CREATION_FAILED`);
   }
 }

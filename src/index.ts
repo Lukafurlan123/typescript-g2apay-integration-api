@@ -1,9 +1,13 @@
-async function server() {
+import { generatePaymentHash, createPaymentRequest, generateIPNHash } from "./functions";
+import { QUOTE_URL, MERCHANT_URL, REST_API } from './constants';
+import { EnvironmentType } from "./enums";
 
-   setInterval(() => {
-       console.log("here")
-   }, 1000);
-    
+export default {
+    generatePaymentHash,
+    generateIPNHash,
+    createPaymentRequest,
+    EnvironmentType,
+    QUOTE_URL,
+    MERCHANT_URL,
+    REST_API,
 }
-
-server();

@@ -90,10 +90,10 @@ export namespace Payment {
     url_failure: string,
     url_ok: string,
     cart_type?: string,
-    items: Item[],
-    addresses?: Addresses[],
+    items: string,
+    addresses?: string,
     process_payment?: string,
-    customer_ip_adress: string,
+    customer_ip_address: string,
   }
   /**
    * @param status PaymentRequest status

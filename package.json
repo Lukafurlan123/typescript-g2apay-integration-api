@@ -11,13 +11,15 @@
   "author": "Luka Furlan",
   "license": "ISC",
   "dependencies": {
-    "@types/sha256": "^0.2.0",
     "axios": "^0.18.0",
+    "query-string": "^5.1.1",
     "sha256": "^0.2.0",
     "ts-node": "^8.0.1",
     "typescript": "^3.1.6"
   },
   "devDependencies": {
-    "@types/node": "^10.12.3"
+    "@types/node": "^10.12.3",
+    "@types/sha256": "^0.2.0",
+    "@types/query-string": "^6.2.0"
   }
 }
